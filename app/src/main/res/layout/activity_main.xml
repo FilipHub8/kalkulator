@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Naglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator Podróży"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/CelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cel podróży:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Cel"
+        app:layout_constraintBottom_toTopOf="@+id/Cel"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/Cel"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:hint="np: Warszawa"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/KMLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dystans [km]:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/KM"
+        app:layout_constraintBottom_toTopOf="@+id/KM"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/KM"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:hint="np: 150"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cel"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/PaliwoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rodzaj paliwa:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Paliwo"
+        app:layout_constraintBottom_toTopOf="@+id/Paliwo"
+        android:layout_marginBottom="5dp" />
+
+    <Spinner
+        android:id="@+id/Paliwo"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:entries="@array/paliwa_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/KM"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/NoclegLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nocleg [zł]:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/Nocleg"
+        app:layout_constraintBottom_toTopOf="@+id/Nocleg"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/Nocleg"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:hint="np: 200"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Paliwo"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/PrzyciskOblicz"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nocleg"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/Status"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/PrzyciskOblicz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

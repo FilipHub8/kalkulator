@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">kalkulator</string>
+    <string-array name="paliwa_array">
+        <item>Benzyna (PB95)</item>
+        <item>Diesel (ON)</item>
+        <item>Gaz (LPG)</item>
+    </string-array>
+</resources>
